@@ -1,0 +1,99 @@
+@charset "UTF-8";
+/* ウィンドウ画面の背景色を設定 */
+body{
+    background-color:#F2FBfc;
+}
+
+h1{
+    background-color:#00648b;
+    font-size: 1.5em;
+    color: #F2FBfc;
+    margin-bottom: 15px;
+    padding: 5px 5px;
+}
+
+h2{
+    color:#00648b;
+    font-size: 1.2em;
+    margin: 5px;
+}
+
+main#index p{
+    margin: 15px 5px;
+   
+}
+
+/* 文字の中央揃えを設定 */
+.center{
+    text-align: center;
+}
+
+/* float親要素の設定 */
+ul.gnav{
+    padding: 0px 5px;
+
+    overflow: hidden;
+    width:970px;
+
+}
+
+/* ナビゲーションボタンの設定　*/
+li.gnav{
+    font-size: 0.8em;
+    margin-right: 30px ;
+    float: left;
+}
+
+li.right{
+    float: right;
+    margin-right: 10px ;
+}
+
+p.right{
+    padding: 0px 5px 50px 0px;
+}
+p.right a{
+    float: right;
+    margin-right: 10px ;
+    font-size: 0.8em;
+    color:rgb(48, 84, 99);
+}
+
+/* floatの解除 */
+section#main{
+    clear:left;
+}
+
+table{
+    width:970px;
+    margin: 0px 5px ;
+
+}
+/* テーブルの枠線 */
+section table th{
+    background-color:#a1d1e4;
+    color: #005068;
+    border:solid #798397;
+    font-size: 0.8em;
+    padding: 3px ;
+}
+section table td {
+    border:solid #798397;
+    padding: 3px 10px;
+}
+
+form p {
+    margin-bottom: 3px;
+    padding-top: 10px;
+}
+
+form input {
+    margin-left: 10px;
+}
+
+section#main{
+    margin-left: 10px;
+}
+p label{
+    font-weight: bold;
+}

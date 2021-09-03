@@ -1,15 +1,15 @@
 <?php
 // データベース接続
 function db_open(): PDO{
-    $user = 'jinji_user';
-    $password = 'PASSWORD';
+    $user = 'devusr';
+    $password = 'MyNewPass4!';
     $opt = [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_EMULATE_PREPARES => false,
         PDO::MYSQL_ATTR_MULTI_STATEMENTS => false,
     ];
     // PDOオブジェクトを生成
-    $dbh = new PDO('mysql:host=localhost;dbname=jinji_db', $user, $password, $opt);
+    $dbh = new PDO('mysql:host=10.0.1.148;dbname=jinji_db', $user, $password, $opt);
 
     // 作成したPDOオブジェクトを返す
     return $dbh;
@@ -133,4 +133,19 @@ function update_employee(PDO $dbh, string $id, string $password, string $name, s
         return $message;
         exit;
     }
+}
+function delete_employee(PDO $dbh, string $id){
+    $sql = 'DELETE  from employee WHERE id=:id';
+    // プレースホルダーを含むSQL実行準備
+    $stmt = $dbh->prepare($sql);
+
+    // プレースホルダーに引数を代入
+    $stmt->bindParam(":id", $id, PDO::PARAM_STR);
+
+    // SQL文の実行
+    $stmt->execute();
+
+    $message = '<p>データが更新されました。<br><a href="index.php">メインメニュー</a>に戻る</p>';
+    return $message;
+
 }

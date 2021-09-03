@@ -3,8 +3,6 @@
 	$page_name = '人事システムメインメニュー';
 	require_once __DIR__ . '/inc/header.php'; 
 ?>
-
-
     <h2>メインメニュー</h2>
     <main id="index">
         <form method="post" action="employee_list.php">
@@ -24,5 +22,4 @@
             <input type="hidden" name="token" value="<?php echo $token ?>">
         </form>
     </main>
-
-<?php require_once __DIR__ . '/inc/footer.php';
+    <?php require_once __DIR__ . '/inc/footer.php';?>

@@ -17,7 +17,7 @@
             <li class="gnav"><a href="./">メインメニュー</a></li>
             <li class="gnav"><a href="employee_list.php">社員一覧</a></li>
             <li class="gnav"><a href="register.php">社員登録</a></li>
-            <li class="gnav"><a href="employeeList.php">社員情報更新</a></li>
+            <li class="gnav"><a href="employee_List.php">社員情報更新</a></li>
             <li class="gnav"><a href="delete.php">社員削除</a></li>
             <li class="gnav right"><a href="logout.php">ログアウト</a></li>
         </ul>

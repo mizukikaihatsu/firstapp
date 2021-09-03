@@ -1,8 +1,13 @@
 <?php
+//セッションの開始とトークンの実装
 session_start();
 $token = bin2hex(random_bytes(20));
 $_SESSION['token'] = $token;
+
+
 ?>
+
+
 
 <?php
 require_once __DIR__ . '/check/login_checker.php';
@@ -10,9 +15,12 @@ require_once __DIR__ . '/check/replacement_checker.php';
 require_once __DIR__ . '/check/input_checker.php';
 require_once __DIR__ . '/dataaccess/employeePDO.php';
 ?>
+
+
+
 <?php 
 	$page_name = '社員登録ページ';
-	require_once __DIR__ . '/inc/header.php'; 
+	require_once __DIR__ . '/inc/header.php'; 	//ヘッダーを読み込む
 ?>
 
 <section id="main">
@@ -42,17 +50,20 @@ require_once __DIR__ . '/dataaccess/employeePDO.php';
         </p>
         <p><input type="radio" name="gender" value="1"> 男</p>
         <p><input type="radio" name="gender" value="2"> 女</p>
+        <p><input type="radio" name="gender" value="" checked ="checked" style="display:none;"></p>
         </p>
         <p>
             <label for="hasfe">基本情報処理資格:</label>
         </p>
         <p><input type="radio" name="hasfe" value="0"> 有</p>
         <p><input type="radio" name="hasfe" value="1"> 無</p>
+        <p><input type="radio" name="hasfe" value="" checked ="checked" style="display:none;"></p>
         <p>
             <label for="hasap">応用情報処理資格:</label>
         </p>
         <p><input type="radio" name="hasap" value="0"> 有</p>
         <p> <input type="radio" name="hasap" value="1"> 無</p>
+        <p><input type="radio" name="hasap" value="" checked ="checked" style= "display:none;"></p>
         <p>
             <label for="hire_date">入社年月日:</label>
         </p>

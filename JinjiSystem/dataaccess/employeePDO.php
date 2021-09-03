@@ -1,15 +1,15 @@
 <?php
 // データベース接続
 function db_open(): PDO{
-    $user = 'devusr';
-    $password = 'MyNewPass4!';
+    $user = 'jinji_user';
+    $password = 'PASSWORD';
     $opt = [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_EMULATE_PREPARES => false,
         PDO::MYSQL_ATTR_MULTI_STATEMENTS => false,
     ];
     // PDOオブジェクトを生成
-    $dbh = new PDO('mysql:host=10.0.1.148;dbname=jinji_db', $user, $password, $opt);
+    $dbh = new PDO('mysql:host=localhost;dbname=jinji_db', $user, $password, $opt);
 
     // 作成したPDOオブジェクトを返す
     return $dbh;
